@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.tiktok</groupId>
     <artifactId>sdk-java</artifactId>
-    <version>20201208</version>
+    <version>20201209</version>
     <name>抖音开放平台SDK</name>
 
     <properties>
@@ -50,12 +50,5 @@
             <version>${jjwt.version}</version>
         </dependency>
     </dependencies>
-
-    <repositories>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
 
 </project>

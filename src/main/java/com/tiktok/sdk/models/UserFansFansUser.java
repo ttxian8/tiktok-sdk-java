@@ -13,17 +13,12 @@
 package com.tiktok.sdk.models;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 /**
  * UserFansFansUser
  */
-
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-08-13T12:03:19.503914+08:00[Asia/Shanghai]")
-@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class UserFansFansUser {
   @JsonProperty("open_id")
   private String openId = null;
@@ -47,7 +42,7 @@ public class UserFansFansUser {
   private String country = null;
 
   /**
-   * 性别:   * &#x60;0&#x60; - 未知   * &#x60;1&#x60; - 男性   * &#x60;2&#x60; - 女性 
+   * 性别:   * &#x60;0&#x60; - 未知   * &#x60;1&#x60; - 男性   * &#x60;2&#x60; - 女性
    */
   public enum GenderEnum {
     NUMBER_0(0),
@@ -78,7 +73,7 @@ public class UserFansFansUser {
       return null;
     }
 
-  }  @JsonProperty("gender")
+  }@JsonProperty("gender")
   private GenderEnum gender = null;
 
   public UserFansFansUser openId(String openId) {

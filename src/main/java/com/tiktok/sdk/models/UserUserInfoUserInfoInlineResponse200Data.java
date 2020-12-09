@@ -21,7 +21,6 @@ import java.util.Objects;
 /**
  * UserUserInfoUserInfoInlineResponse200Data
  */
-
 public class UserUserInfoUserInfoInlineResponse200Data {
   @JsonProperty("error_code")
   private Integer errorCode = null;

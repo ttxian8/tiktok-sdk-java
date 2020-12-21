@@ -14,8 +14,6 @@ package com.tiktok.sdk.models;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 /**
  * EnterpriseLeadsLeadsUserInlineResponse2002DataList
@@ -27,38 +25,8 @@ public class EnterpriseLeadsLeadsUserInlineResponse2002DataList {
   /**
    * 分类   * &#x60;0&#x60; - 全部   * &#x60;1&#x60; - 私信互动   * &#x60;2&#x60; - 组件互动   * &#x60;3&#x60; - 主页互动 
    */
-  public enum ActionTypeEnum {
-    NUMBER_0(0),
-    NUMBER_1(1),
-    NUMBER_2(2),
-    NUMBER_3(3);
-
-    private Integer value;
-
-    ActionTypeEnum(Integer value) {
-      this.value = value;
-    }
-    @JsonValue
-    public Integer getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-    @JsonCreator
-    public static ActionTypeEnum fromValue(String text) {
-      for (ActionTypeEnum b : ActionTypeEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
-          return b;
-        }
-      }
-      return null;
-    }
-
-  }  @JsonProperty("action_type")
-  private ActionTypeEnum actionType = null;
+  @JsonProperty("action_type")
+  private Integer actionType = null;
 
   @JsonProperty("user_id")
   private String userId = null;
@@ -72,7 +40,7 @@ public class EnterpriseLeadsLeadsUserInlineResponse2002DataList {
   @JsonProperty("create_time")
   private Integer createTime = null;
 
-  public EnterpriseLeadsLeadsUserInlineResponse2002DataList actionType(ActionTypeEnum actionType) {
+  public EnterpriseLeadsLeadsUserInlineResponse2002DataList actionType(Integer actionType) {
     this.actionType = actionType;
     return this;
   }
@@ -81,11 +49,11 @@ public class EnterpriseLeadsLeadsUserInlineResponse2002DataList {
    * 分类   * &#x60;0&#x60; - 全部   * &#x60;1&#x60; - 私信互动   * &#x60;2&#x60; - 组件互动   * &#x60;3&#x60; - 主页互动 
    * @return actionType
   **/
-  public ActionTypeEnum getActionType() {
+  public Integer getActionType() {
     return actionType;
   }
 
-  public void setActionType(ActionTypeEnum actionType) {
+  public void setActionType(Integer actionType) {
     this.actionType = actionType;
   }
 
